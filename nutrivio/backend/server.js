@@ -24,6 +24,7 @@ app.use(
       "http://localhost:3000",
       "http://localhost:4173",
       "http://192.168.0.200:5174",
+      ...(process.env.FRONTEND_URL ? [process.env.FRONTEND_URL] : []),
     ],
     credentials: true,
   }),
